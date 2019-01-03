@@ -1,0 +1,36 @@
+.article {
+  border-top: 1px solid #dedede;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+}
+
+.articleMedia {
+  text-align: center;
+  max-width: 100px;
+  max-height: 100px;
+  padding: 0 10px;
+}
+
+.articleMediaImage {
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.articleTitle {
+  font-size: 14px;
+  line-height: 1;
+  margin: 0;
+}
+
+.articleTitleLink {
+  text-decoration: none;
+  color: #333;
+}
+
+.articleText {
+  font-size: 12px;
+  line-height: 1;
+  color: #363636;
+  margin: 7px 0 0;
+}
