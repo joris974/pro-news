@@ -10,16 +10,29 @@ class ArticleListContainer extends Component {
 
   componentDidMount() {
     const { currentSource } = this.props;
-    fetchArticlesForSource(currentSource).then(data => {
+    this.fetchDataAndUpdateState(currentSource);
+  }
+
+  fetchDataAndUpdateState(source) {
+    fetchArticlesForSource(source).then(data => {
       this.setState({ articlesData: data.articles });
     });
+  }
+
+  componentWillReceiveProps(newProps) {
+    const { currentSource } = this.props;
+    if (newProps.currentSource !== currentSource) {
+      this.fetchDataAndUpdateState(newProps.currentSource);
+    }
   }
 
   render() {
     const { currentSource } = this.props;
     const { articlesData } = this.state;
 
-    const articles = articlesData.map(article => <Article {...article} />);
+    const articles = articlesData.map((article, i) => (
+      <Article key={`${currentSource}-${i}`} {...article} />
+    ));
 
     return <div>{articles}</div>;
   }

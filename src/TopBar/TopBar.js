@@ -9,6 +9,7 @@ function TopBar(props) {
     <select
       onChange={onChangeSource}
       className={style.sourceSelectionSelectInput}
+      value={currentSource}
     >
       <option value="google-news">Google News</option>
       <option value="cnn">CNN</option>
