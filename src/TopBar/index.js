@@ -21,7 +21,6 @@ class TopBarContainer extends Component {
           currentSource={currentSource}
           onChangeSource={this.onChangeSource}
         />
-        {currentSource}
       </React.Fragment>
     );
   }

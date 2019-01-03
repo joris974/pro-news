@@ -1,3 +1,16 @@
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+  background: #eee;
+}
+
+::-moz-selection,
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -8,7 +21,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+img {
+  vertical-align: middle;
 }

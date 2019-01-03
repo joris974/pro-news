@@ -1,10 +1,15 @@
 import React from "react";
 
+import style from "./TopBar.module.css";
+
 function TopBar(props) {
   const { currentSource, onChangeSource } = props;
 
   return (
-    <select onChange={onChangeSource}>
+    <select
+      onChange={onChangeSource}
+      className={style.sourceSelectionSelectInput}
+    >
       <option value="google-news">Google News</option>
       <option value="cnn">CNN</option>
       <option value="the-new-york-times">The New York Times</option>

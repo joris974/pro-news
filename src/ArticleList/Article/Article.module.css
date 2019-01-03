@@ -5,6 +5,10 @@
   flex-direction: row;
 }
 
+.article:first-child {
+  border: none;
+}
+
 .articleMedia {
   text-align: center;
   max-width: 100px;

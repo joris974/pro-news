@@ -1,0 +1,13 @@
+.sourceSelectionSelectInput {
+  background: #3b217b;
+  border: none;
+  padding: 10px;
+  color: #fff;
+  box-shadow: none;
+  border-radius: 10px;
+}
+
+.sourceSelectionSelectInput:hover,
+.sourceSelectionSelectInput:focus {
+  outline: none;
+}
