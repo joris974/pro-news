@@ -10,6 +10,7 @@ function TopBar(props) {
       onChange={onChangeSource}
       className={style.sourceSelectionSelectInput}
       value={currentSource}
+      aria-label="Select Source"
     >
       <option value="google-news">Google News</option>
       <option value="cnn">CNN</option>
