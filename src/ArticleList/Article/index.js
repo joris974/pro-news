@@ -1,11 +1,14 @@
 import React from "react";
-import logo from "./../../logo.svg";
+import defaultImage from "./default-image.png";
 import style from "./Article.module.css";
 
 function Article(props) {
   const { urlToImage, title, url, description } = props;
 
-  const imageSrc = urlToImage === "" ? logo : urlToImage;
+  const imageSrc =
+    urlToImage === null || urlToImage === undefined || urlToImage === ""
+      ? defaultImage
+      : urlToImage;
 
   return (
     <div className={style.article}>
