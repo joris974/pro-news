@@ -1,8 +1,8 @@
 {
   "name": "Fast News",
   "short_name": "Fast News",
-  "theme_color": "#3372df",
-  "background_color": "#3372df",
+  "theme_color": "#512da8",
+  "background_color": "#512da8",
   "display": "standalone",
   "orientation": "portrait",
   "Scope": "/",
