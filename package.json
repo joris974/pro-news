@@ -4,10 +4,10 @@
   "private": true,
   "homepage": "https://joris974.github.io/pro-news",
   "dependencies": {
-    "gh-pages": "^2.0.1",
-    "react": "^16.7.0",
-    "react-dom": "^16.7.0",
-    "react-scripts": "2.1.2"
+    "gh-pages": "^2.1.1",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2",
+    "react-scripts": "^3.2.0"
   },
   "scripts": {
     "predeploy": "npm run build",
