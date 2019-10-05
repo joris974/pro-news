@@ -1,29 +1,51 @@
 import React from "react";
-
+import Nav from "react-bootstrap/Nav";
 import style from "./TopBar.module.css";
+
+const CHANNELS = [
+  { value: "google-news", name: "Google News" },
+  { value: "cnn", name: "CNN" },
+  { value: "the-new-york-times", name: "The New York Times" },
+  { value: "the-washington-post", name: "The Washington Post" },
+  { value: "time", name: "Time" },
+  { value: "reuters", name: "Reuters" },
+  { value: "the-huffington-post", name: "The Huffington Post" },
+  { value: "associated-press", name: "Associated Press" },
+  { value: "newsweek", name: "Newsweek" },
+  { value: "new-york-magazine", name: "New York Magazine" },
+  { value: "usa-today", name: "USA Today" }
+];
 
 function TopBar(props) {
   const { currentSource, onChangeSource } = props;
 
+  const tabs = CHANNELS.map(channel => {
+    const { value, name } = channel;
+    const isActiveClassName = value === currentSource ? style.activeTab : "";
+    const classNames = [style.tab, isActiveClassName].join(" ").trim();
+
+    return (
+      <Nav.Item
+        key={value}
+        onClick={() => {
+          onChangeSource(value);
+        }}
+        className={classNames}
+      >
+        {name}
+      </Nav.Item>
+    );
+  });
+
   return (
-    <select
-      onChange={onChangeSource}
-      className={style.sourceSelectionSelectInput}
-      value={currentSource}
-      aria-label="Select Source"
+    <Nav
+      justify
+      variant="tabs"
+      defaultActiveKey={currentSource}
+      className={style.tabs}
     >
-      <option value="google-news">Google News</option>
-      <option value="cnn">CNN</option>
-      <option value="the-new-york-times">The New York Times</option>
-      <option value="the-washington-post">The Washington Post</option>
-      <option value="time">Time</option>
-      <option value="reuters">Reuters</option>
-      <option value="the-huffington-post">The Huffington Post</option>
-      <option value="associated-press">Associated Press</option>
-      <option value="newsweek">Newsweek</option>
-      <option value="new-york-magazine">New York Magazine</option>
-      <option value="usa-today">USA Today</option>
-    </select>
+      {tabs}
+    </Nav>
   );
 }
 

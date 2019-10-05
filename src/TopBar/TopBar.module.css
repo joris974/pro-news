@@ -1,13 +1,21 @@
-.sourceSelectionSelectInput {
-  background: #3b217b;
-  border: none;
-  padding: 10px;
-  color: #fff;
-  box-shadow: none;
-  border-radius: 10px;
+.tabs {
+  flex-wrap: nowrap;
+  overflow-x: auto;
 }
 
-.sourceSelectionSelectInput:hover,
-.sourceSelectionSelectInput:focus {
-  outline: none;
+.tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.tab {
+  flex: 0 0 auto !important;
+  background: #512da8;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 10px 15px;
+}
+
+.activeTab {
+  background: #fff;
+  color: #512da8;
 }

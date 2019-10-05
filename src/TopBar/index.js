@@ -7,21 +7,19 @@ class TopBarContainer extends Component {
     this.onChangeSource = this.onChangeSource.bind(this);
   }
 
-  onChangeSource(event) {
+  onChangeSource(newSource) {
     const { onChangeSource } = this.props;
-    onChangeSource(event.target.value);
+    onChangeSource(newSource);
   }
 
   render() {
     const { currentSource } = this.props;
 
     return (
-      <React.Fragment>
-        <TopBar
-          currentSource={currentSource}
-          onChangeSource={this.onChangeSource}
-        />
-      </React.Fragment>
+      <TopBar
+        currentSource={currentSource}
+        onChangeSource={this.onChangeSource}
+      />
     );
   }
 }

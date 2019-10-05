@@ -22,7 +22,7 @@ class App extends Component {
   render() {
     const { currentSource } = this.state;
     return (
-      <div className="App">
+      <div>
         <header>
           <TopBar
             currentSource={currentSource}
