@@ -1,4 +1,6 @@
 import React from "react";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 import defaultImage from "./default-image.png";
 import style from "./Article.module.css";
 
@@ -11,8 +13,8 @@ function Article(props) {
       : urlToImage;
 
   return (
-    <div className={style.article}>
-      <div className={style.articleMedia}>
+    <Row className={style.articleRow}>
+      <Col xs="auto">
         <img
           className={style.articleMediaImage}
           width="100"
@@ -21,16 +23,16 @@ function Article(props) {
           title={title}
           alt={title}
         />
-      </div>
-      <div className={style.articleContent}>
+      </Col>
+      <Col className={style.articleContent}>
         <h2 className={style.articleTitle}>
           <a href={url} className={style.articleTitleLink}>
             {title}
           </a>
         </h2>
         <p className={style.articleText}>{description}</p>
-      </div>
-    </div>
+      </Col>
+    </Row>
   );
 }
 

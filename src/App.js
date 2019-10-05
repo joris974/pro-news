@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Container from "react-bootstrap/Container";
 import "./App.css";
 import TopBar from "./TopBar";
 import ArticleListContainer from "./ArticleList";
@@ -28,9 +29,9 @@ class App extends Component {
             onChangeSource={this.onChangeSource}
           />
         </header>
-        <div>
+        <Container>
           <ArticleListContainer currentSource={currentSource} />
-        </div>
+        </Container>
       </div>
     );
   }

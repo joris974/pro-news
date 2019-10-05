@@ -34,7 +34,7 @@ class ArticleListContainer extends Component {
       <Article key={`${currentSource}-${i}`} {...article} />
     ));
 
-    return <div>{articles}</div>;
+    return articles;
   }
 }
 
